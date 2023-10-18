@@ -1,9 +1,9 @@
 import { LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js"
 import idl from "../idl.json"
 import { BN } from "bn.js"
-import { useLottery } from "../context/Lottery"
 import { bs58 } from '@project-serum/anchor/dist/cjs/utils/bytes'
 import * as buffer from "buffer";
+import { useEffect } from 'react';
 window.Buffer = buffer.Buffer;
 
 const PROGRAM_KEY = new PublicKey(idl.metadata.address)
@@ -86,4 +86,19 @@ export const getTotalPrize = async (Lottery) => {
     .mul(Lottery.ticketyPrice)
     .div(new BN(LAMPORTS_PER_SOL))
     .toString();
+}
+
+/**
+ * useKeyPress
+ * @param {string} key - the name of the key to respond to, compared against event.key
+ * @param {function} action - the action to perform on key press
+ */
+export default function useKeypress(key, action) {
+  useEffect(() => {
+    function onKeyup(e) {
+      if (e.key === key) action()
+    }
+    window.addEventListener('keyup', onKeyup);
+    return () => window.removeEventListener('keyup', onKeyup);
+  }, []);
 }

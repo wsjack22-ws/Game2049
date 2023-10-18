@@ -1,5 +1,5 @@
 import RankEntry from "./RankEntry";
-import "../App.css";
+import "../css/App.css";
 
 const RankContainer = ({ topUsers }) => {
     return (

@@ -1,4 +1,4 @@
-import "../App.js"
+import "../css/App.css"
 const RankEntry = (props) => {
     const {rank, name, score} = props;
     return (

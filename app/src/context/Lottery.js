@@ -158,6 +158,7 @@ export const LotteryProvider = ({ children }) => {
         ticketData,
         buyTicket,
         claimPrize,
+        setScore,
         }}>
             {children}
         </LotteryContext.Provider>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import logo from '../assets/logo.png';
-import '../App.css';
+import '../css/App.css';
 import RankContainer from '../components/RankContainer';
 import idl from "../idl.json"
 import { Program } from "@project-serum/anchor"

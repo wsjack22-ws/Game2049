@@ -1,5 +1,5 @@
 {
-  "name": "buildspace-solana",
+  "name": "game2049",
   "version": "0.1.0",
   "private": true,
   "browser": {
@@ -19,10 +19,14 @@
     "@types/node": "^20.8.5",
     "buffer-es": "^1.0.0",
     "buffer-esm": "^1.2.0",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.7.1",
+    "jQuery": "^1.7.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.16.0",
     "react-scripts": "^5.0.1",
+    "sass": "^1.69.3",
     "solana": "^1.0.7-development",
     "ts-node": "^10.9.1",
     "types": "^0.1.1",
